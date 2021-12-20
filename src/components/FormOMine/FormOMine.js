@@ -74,7 +74,7 @@ export default class formOMine extends React.Component {
 
 
                     <Form.Group className={"row"}>
-                        <Form.Label className={"row-label"} htmlFor="email">Email</Form.Label>
+                        <Form.Label className={"row-label"} htmlFor="email">You're Email</Form.Label>
                         <Form.Control className={"row-input"} id="email" name="email" type="email" value={this.state.email}
                                       onChange={this.handleChange}/>
                     </Form.Group>
@@ -94,7 +94,7 @@ export default class formOMine extends React.Component {
                         <div className={"row-input"}>
                             <Button  className="submit-btn" variant="primary"
                                      type="submit" disabled={this.state.disabled}>
-                                Send
+                                Send an email
                             </Button>
                         </div>
                     </div>

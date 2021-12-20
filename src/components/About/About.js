@@ -10,19 +10,29 @@ export default function About() {
                 <p
                     className={"uk-text-right"}
                     uk-scrollspy="cls: uk-animation-slide-right;delay:500 ;repeat: false">
-                    <em className={"uk-padding-large"}>A fiery passion for programming. Currently working as a freelance developer on Fiverr.</em>
+                    <em>A fiery passion for programming.</em>
                 </p>
                 <hr/>
-                <p>
-                    While in high school, coding was something I started too follow as a hobby.
-                    That hobby eventually turned into college, where A spark was ignited. Since then,
-                    I have been pushing myself as a programmer, to learn as much as I can while building my own applications
-                    and personal projects.
-                    Programming to me is the perfect mix of logic and creative thinking, that allows me to always think
-                    outside the box.
-                    <br/>
+                <div className={"about-main-text"}>
+                    <p>
+                        While in high school, coding was something I started too follow as a hobby.
+                        That hobby eventually turned into college, where A spark was ignited.
+                    </p>
 
-                </p>
+                    <p>
+                        Since then,
+                        I have been pushing myself as a programmer, to learn as much as I can while building my own
+                        applications
+                        and personal projects.
+                    </p>
+
+                    <p>
+                        Programming to me is the perfect mix of logic and creative thinking, that allows me to always think
+                        outside the box.
+                    </p>
+                </div>
+
+
             </div>
         </div>
     )

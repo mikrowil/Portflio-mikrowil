@@ -20,7 +20,7 @@ export default function Projects() {
         getProjects()
     }, [])
 
-    const toggleModal = (project) => {
+    const toggleModal = (project={}) => {
         setSelectedProject(project)
         setModalOpen(!modalOpen)
     }
@@ -39,7 +39,7 @@ export default function Projects() {
                     ))
                 }
                 {
-                    modalOpen ? <Modal project={selectedProject}/> :
+                    modalOpen ? <Modal toggleModal={toggleModal} project={selectedProject}/> :
                         null
                 }
 

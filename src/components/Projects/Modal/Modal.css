@@ -8,13 +8,40 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.4);
+
 }
 
 .modal-content {
-    background-color: #fefefe;
+    position: relative;
+    font-family: 'Inconsolata', monospace;
+    background-color: #1f1f26;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    color: #fdfdfe;
+}
+.modal_title{
+    text-align: center;
+    margin:5%;
+    font-size: clamp(1.7rem, 4vw, 2rem);
+}
+.modal_description{
+    margin: 2% 0;
+
+}
+.modal-technologies-title{
+    font-size: 1.5rem;
+}
+.modal-btn-close{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    background-color: #d836cb;
+    color: #fdfdfe;
+    padding: 1%;
+    border-radius: 5px;
 }

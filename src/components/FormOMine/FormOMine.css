@@ -18,7 +18,7 @@
     flex: 2;
     text-align: right;
     font-size: clamp(1rem, 4vw, 2rem);
-
+    color:#fdfdfe;
 }
 .row-input{
     flex: 5;
@@ -26,12 +26,12 @@
     border-radius: 5px;
 }
 .submit-btn{
-    width: 100%;
+    justify-self: end;
     font-size: clamp(1rem, 4vw, 2rem);
-    background-color: #c331ec;
-    color: #fdfdfe;
+    background-color: #ba6acf;
+    color: #2c012c;
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid #290038;
+    border: 2px solid #2c012c;
     text-shadow: -1px 1px #282c34;
     border-radius: 10px;
 }
