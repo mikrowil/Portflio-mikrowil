@@ -3,7 +3,7 @@ import { Form, Formik } from "formik";
 import { TextField, Button, Grid } from "@mui/material";
 import Axios from "axios";
 import './FormOMine.css'
-import SectionHeader from "../SectionHeader/SectionHeader";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import * as yup from "yup";
 import styled from "@emotion/styled";
 
@@ -35,6 +35,7 @@ export default class formOMine extends React.Component {
       message: '',
       disabled: false,
       emailSent: null,
+      validateOnChange: false,
     }
   }
 
@@ -77,22 +78,21 @@ export default class formOMine extends React.Component {
           emailSent: false
         });
       })
-
   }
 
   render() {
     return (
       <div className={"form-container"}>
-        <SectionHeader title={"contact"}/>
+        <SectionHeader title={"Contact"}/>
         <InnerContainer>
           <Formik
             initialValues={initialValues}
             validationSchema={yupValidators}
             className={"form"}
             onSubmit={this.handleSubmit}
-            validateOnChange={false}
+            validateOnChange={this.state.validateOnChange}
             validateOnBlur={false}
-            render={(
+            >{(
               {
                 values,
                 errors,
@@ -139,6 +139,11 @@ export default class formOMine extends React.Component {
                     <Grid item xs={12}>
                       <Button
                         type={"submit"}
+                        onClick={()=>{
+                          this.setState({
+                            validateOnChange:true
+                          })
+                        }}
                       >
                         Send
                       </Button>
@@ -146,7 +151,7 @@ export default class formOMine extends React.Component {
                   </Grid>
                 </Form>
               )
-            }}/>
+          }}</Formik>
         </InnerContainer>
       </div>
 

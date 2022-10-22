@@ -1,0 +1,31 @@
+
+.title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.title_text {
+    align-items: center;
+    color: black;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@keyframes ani_sub_text {
+    0%{opacity: 0; transform: translateY(5vh)}
+    50%{opacity: 0; transform: translateY(5vh)}
+    100%{opacity: 1;transform: translateY(0)}
+}
+.title_sub_text{
+    animation: ani_sub_text 2s normal ease-in-out;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inconsolata', monospace;
+    font-size: clamp(2rem, 5vw, 5rem);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
